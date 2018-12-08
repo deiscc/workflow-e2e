@@ -4,14 +4,14 @@ import (
 	"os"
 	"strings"
 
-	deis "github.com/deis/controller-sdk-go"
-	"github.com/deis/workflow-e2e/tests/cmd"
-	"github.com/deis/workflow-e2e/tests/cmd/apps"
-	"github.com/deis/workflow-e2e/tests/cmd/auth"
-	"github.com/deis/workflow-e2e/tests/cmd/builds"
-	"github.com/deis/workflow-e2e/tests/model"
-	"github.com/deis/workflow-e2e/tests/settings"
-	"github.com/deis/workflow-e2e/tests/util"
+	deis "github.com/deiscc/controller-sdk-go"
+	"github.com/deiscc/workflow-e2e/tests/cmd"
+	"github.com/deiscc/workflow-e2e/tests/cmd/apps"
+	"github.com/deiscc/workflow-e2e/tests/cmd/auth"
+	"github.com/deiscc/workflow-e2e/tests/cmd/builds"
+	"github.com/deiscc/workflow-e2e/tests/model"
+	"github.com/deiscc/workflow-e2e/tests/settings"
+	"github.com/deiscc/workflow-e2e/tests/util"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -134,7 +134,7 @@ var _ = Describe("deis apps", func() {
 		Context("who has a local git repo containing source code", func() {
 
 			BeforeEach(func() {
-				output, err := cmd.Execute(`git clone https://github.com/deisthree/example-go.git`)
+				output, err := cmd.Execute(`git clone https://github.com/deiscc/example-go.git`)
 				Expect(err).NotTo(HaveOccurred(), output)
 			})
 

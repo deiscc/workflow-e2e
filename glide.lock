@@ -1,7 +1,7 @@
 hash: d4df07af09ac276ba107aff25a4019af3f670a70d5b6b453bddf6828b0a5c376
 updated: 2017-01-09T13:13:07.891110078-08:00
 imports:
-- name: github.com/deis/controller-sdk-go
+- name: github.com/deiscc/controller-sdk-go
   version: 9520b6c460202f376856d042ac4864ee951cdf3a
 - name: github.com/onsi/ginkgo
   version: a23f924ce96d61f963fb6219b8ff069d8d768cc2

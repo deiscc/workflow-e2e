@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/deis/workflow-e2e/tests/model"
-	"github.com/deis/workflow-e2e/tests/settings"
+	"github.com/deiscc/workflow-e2e/tests/model"
+	"github.com/deiscc/workflow-e2e/tests/settings"
 
 	"github.com/onsi/ginkgo"
 	"github.com/onsi/gomega"
@@ -66,7 +66,7 @@ func StartCmd(command model.Cmd) (*gexec.Session, error) {
 // supplied <timeout> until the <cmd> result contains the <expectedResult>
 // An example use of this utility would be curl-ing a url and waiting
 // until the response code matches the expected response.
-// TODO: https://github.com/deisthree/workflow-e2e/issues/240
+// TODO: https://github.com/deiscc/workflow-e2e/issues/240
 func Retry(command model.Cmd, expectedResult string, timeout int) bool {
 	var result string
 	fmt.Fprintf(ginkgo.GinkgoWriter, "Waiting up to %d seconds for `%s` to return %s...\n", timeout, command.CommandLineString, expectedResult)

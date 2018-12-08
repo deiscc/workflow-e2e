@@ -1,6 +1,6 @@
 SHORT_NAME := workflow-e2e
 
-SRC_PATH := /go/src/github.com/deis/workflow-e2e
+SRC_PATH := /go/src/github.com/deiscc/workflow-e2e
 
 MUTABLE_VERSION ?= canary
 VERSION ?= git-$(shell git rev-parse --short HEAD)
@@ -30,7 +30,7 @@ IMAGE_PREFIX ?= deis
 IMAGE := ${DEIS_REGISTRY}${IMAGE_PREFIX}/${SHORT_NAME}:${VERSION}
 MUTABLE_IMAGE := ${DEIS_REGISTRY}${IMAGE_PREFIX}/${SHORT_NAME}:${MUTABLE_VERSION}
 
-DEV_IMG := quay.io/deis/go-dev:0.20.0
+DEV_IMG := deiscc/go-dev:0.20.0
 DEV_CMD_ARGS := --rm -v ${CURDIR}:${SRC_PATH} -w ${SRC_PATH} ${DEV_IMG}
 DEV_CMD := docker run ${DEV_CMD_ARGS}
 DEV_CMD_INT := docker run -it ${DEV_CMD_ARGS}
@@ -70,7 +70,7 @@ test: test-style
 
 test-style:
 	docker run --rm -v ${CURDIR}:/bash -w /bash \
-		quay.io/deis/shell-dev shellcheck $(wildcard *.sh)
+		deiscc/shell-dev shellcheck $(wildcard *.sh)
 
 docker-build:
 	docker build -t ${IMAGE} ${CURDIR}

@@ -5,12 +5,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/deis/workflow-e2e/tests/cmd"
-	"github.com/deis/workflow-e2e/tests/cmd/apps"
-	"github.com/deis/workflow-e2e/tests/cmd/auth"
-	"github.com/deis/workflow-e2e/tests/cmd/git"
-	"github.com/deis/workflow-e2e/tests/cmd/keys"
-	"github.com/deis/workflow-e2e/tests/model"
+	"github.com/deiscc/workflow-e2e/tests/cmd"
+	"github.com/deiscc/workflow-e2e/tests/cmd/apps"
+	"github.com/deiscc/workflow-e2e/tests/cmd/auth"
+	"github.com/deiscc/workflow-e2e/tests/cmd/git"
+	"github.com/deiscc/workflow-e2e/tests/cmd/keys"
+	"github.com/deiscc/workflow-e2e/tests/model"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/extensions/table"
@@ -63,30 +63,30 @@ var _ = Describe("all buildpack apps", func() {
 				// NOTE: Keep this list up-to-date with any example apps that are added
 				// under the github/deis org, or any third-party apps that increase coverage
 				// or prevent regressions.
-				Entry("Clojure", "https://github.com/deisthree/example-clojure-ring.git", "",
+				Entry("Clojure", "https://github.com/deiscc/example-clojure-ring.git", "",
 					"Powered by Deis"),
-				Entry("Go", "https://github.com/deisthree/example-go.git", "",
+				Entry("Go", "https://github.com/deiscc/example-go.git", "",
 					"Powered by Deis"),
-				Entry("Java", "https://github.com/deisthree/example-java-jetty.git", "",
+				Entry("Java", "https://github.com/deiscc/example-java-jetty.git", "",
 					"Powered by Deis"),
-				Entry("Multi", "https://github.com/deisthree/example-multi", "",
+				Entry("Multi", "https://github.com/deiscc/example-multi", "",
 					"Heroku Multipack Test"),
-				Entry("NodeJS", "https://github.com/deisthree/example-nodejs-express.git", "",
+				Entry("NodeJS", "https://github.com/deiscc/example-nodejs-express.git", "",
 					"Powered by Deis"),
-				Entry("Perl", "https://github.com/deisthree/example-perl.git",
+				Entry("Perl", "https://github.com/deiscc/example-perl.git",
 					"https://github.com/miyagawa/heroku-buildpack-perl.git",
 					"Powered by Deis"),
-				Entry("PHP", "https://github.com/deisthree/example-php.git", "",
+				Entry("PHP", "https://github.com/deiscc/example-php.git", "",
 					"Powered by Deis"),
-				Entry("Java (Play)", "https://github.com/deisthree/example-play.git", "",
+				Entry("Java (Play)", "https://github.com/deiscc/example-play.git", "",
 					"Powered by Deis"),
-				Entry("Python (Django)", "https://github.com/deisthree/example-python-django.git", "",
+				Entry("Python (Django)", "https://github.com/deiscc/example-python-django.git", "",
 					"Powered by Deis"),
-				Entry("Python (Flask)", "https://github.com/deisthree/example-python-flask.git", "",
+				Entry("Python (Flask)", "https://github.com/deiscc/example-python-flask.git", "",
 					"Powered by Deis"),
-				Entry("Ruby", "https://github.com/deisthree/example-ruby-sinatra.git", "",
+				Entry("Ruby", "https://github.com/deiscc/example-ruby-sinatra.git", "",
 					"Powered by Deis"),
-				Entry("Scala", "https://github.com/deisthree/example-scala.git", "",
+				Entry("Scala", "https://github.com/deiscc/example-scala.git", "",
 					"Powered by Deis"),
 			)
 

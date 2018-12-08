@@ -53,7 +53,7 @@ The current core maintainers of Deis:
 * Matthew Fisher - <mfisher@engineyard.com> ([@bacongobbler](https://github.com/bacongobbler))
 
 No pull requests can be merged until at least one core maintainer signs off with an
-[LGTM](http://docs.deis.io/en/latest/contributing/standards/#merge-approval). The other LGTM can
+[LGTM](http://docs.deis.cc/en/latest/contributing/standards/#merge-approval). The other LGTM can
 come from either a core maintainer or contributing maintainer.
 
 ## Contributing maintainers

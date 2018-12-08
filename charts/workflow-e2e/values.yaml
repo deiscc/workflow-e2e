@@ -1,4 +1,4 @@
-org: "deisci"
+org: "deiscc"
 docker_tag: "canary"
 pull_policy: "Always"
 pod_name: "workflow-e2e"

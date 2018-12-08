@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/deis/workflow-e2e/tests/util"
+	"github.com/deiscc/workflow-e2e/tests/util"
 )
 
 const (

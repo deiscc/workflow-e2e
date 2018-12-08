@@ -5,13 +5,13 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/deis/workflow-e2e/tests/cmd"
-	"github.com/deis/workflow-e2e/tests/cmd/apps"
-	"github.com/deis/workflow-e2e/tests/cmd/auth"
-	"github.com/deis/workflow-e2e/tests/cmd/git"
-	"github.com/deis/workflow-e2e/tests/cmd/keys"
-	"github.com/deis/workflow-e2e/tests/model"
-	"github.com/deis/workflow-e2e/tests/settings"
+	"github.com/deiscc/workflow-e2e/tests/cmd"
+	"github.com/deiscc/workflow-e2e/tests/cmd/apps"
+	"github.com/deiscc/workflow-e2e/tests/cmd/auth"
+	"github.com/deiscc/workflow-e2e/tests/cmd/git"
+	"github.com/deiscc/workflow-e2e/tests/cmd/keys"
+	"github.com/deiscc/workflow-e2e/tests/model"
+	"github.com/deiscc/workflow-e2e/tests/settings"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -43,7 +43,7 @@ var _ = Describe("git push deis master", func() {
 			Context("and who has a local git repo containing buildpack source code", func() {
 
 				BeforeEach(func() {
-					output, err := cmd.Execute(`git clone https://github.com/deisthree/example-go.git`)
+					output, err := cmd.Execute(`git clone https://github.com/deiscc/example-go.git`)
 					Expect(err).NotTo(HaveOccurred(), output)
 				})
 
@@ -95,7 +95,7 @@ var _ = Describe("git push deis master", func() {
 					Context("with a bad buildpack", func() {
 
 						BeforeEach(func() {
-							badBuildpackURL := "https://github.com/deisthree/heroku-buildpack-epic-fail.git"
+							badBuildpackURL := "https://github.com/deiscc/heroku-buildpack-epic-fail.git"
 							sess, err := cmd.Start("deis config:set BUILDPACK_URL=%s", &user, badBuildpackURL)
 							Expect(err).NotTo(HaveOccurred())
 							Eventually(sess).Should(Say("BUILDPACK_URL"))
@@ -122,7 +122,7 @@ var _ = Describe("git push deis master", func() {
 
 						BeforeEach(func() {
 							os.Chdir("..")
-							output, err := cmd.Execute(`git clone https://github.com/deisthree/example-nodejs-express.git`)
+							output, err := cmd.Execute(`git clone https://github.com/deiscc/example-nodejs-express.git`)
 							Expect(err).NotTo(HaveOccurred(), output)
 						})
 
@@ -168,7 +168,7 @@ var _ = Describe("git push deis master", func() {
 			Context("and who has a local git repo containing dockerfile source code", func() {
 
 				BeforeEach(func() {
-					output, err := cmd.Execute(`git clone https://github.com/deisthree/example-dockerfile-http.git`)
+					output, err := cmd.Execute(`git clone https://github.com/deiscc/example-dockerfile-http.git`)
 					Expect(err).NotTo(HaveOccurred(), output)
 				})
 
@@ -223,7 +223,7 @@ var _ = Describe("git push deis master", func() {
 					Context("with a bad Dockerfile", func() {
 
 						BeforeEach(func() {
-							badCommit := `echo "BOGUS command" >> Dockerfile && EMAIL="ci@deis.com" git commit Dockerfile -m "Added a bogus command"`
+							badCommit := `echo "BOGUS command" >> Dockerfile && EMAIL="ci@deis.cc" git commit Dockerfile -m "Added a bogus command"`
 							output, err := cmd.Execute(badCommit)
 							Expect(err).NotTo(HaveOccurred(), output)
 						})
@@ -247,7 +247,7 @@ var _ = Describe("git push deis master", func() {
 
 						BeforeEach(func() {
 							os.Chdir("..")
-							output, err := cmd.Execute(`git clone https://github.com/deisthree/example-dockerfile-procfile-http.git`)
+							output, err := cmd.Execute(`git clone https://github.com/deiscc/example-dockerfile-procfile-http.git`)
 							Expect(err).NotTo(HaveOccurred(), output)
 						})
 

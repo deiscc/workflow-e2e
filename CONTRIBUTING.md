@@ -21,13 +21,13 @@ Additionally, see the [Troubleshooting Deis][troubleshooting] documentation for 
 
 Our official support channels are:
 
-- GitHub issues: https://github.com/deisthree/deis/issues/new
+- GitHub issues: https://github.com/deiscc/deis/issues/new
 - IRC: #[deis](irc://irc.freenode.org:6667/#deis) IRC channel on freenode.org
 
 ## Getting Started
 
 - Fork the repository on GitHub
-- Read [the documentation](http://docs.deis.io/en/latest/contributing/hacking/) for build instructions
+- Read [the documentation](http://docs.deis.cc/en/latest/contributing/hacking/) for build instructions
 
 ## Contribution Flow
 
@@ -43,7 +43,7 @@ Thanks for your contributions!
 
 ### Design Documents
 
-Most substantial changes to Deis should follow a [Design Document](http://docs.deis.io/en/latest/contributing/design-documents/)
+Most substantial changes to Deis should follow a [Design Document](http://docs.deis.cc/en/latest/contributing/design-documents/)
 describing the proposed changes and how they are tested and verified before they
 are accepted into the project.
 
@@ -97,5 +97,5 @@ The allowed {types} are as follows:
 For more details see the [commit style guide][style-guide].
 
 [dco]: DCO
-[style-guide]: http://docs.deis.io/en/latest/contributing/standards/#commit-style-guide
-[troubleshooting]: http://docs.deis.io/en/latest/troubleshooting_deis/
+[style-guide]: http://docs.deis.cc/en/latest/contributing/standards/#commit-style-guide
+[troubleshooting]: http://docs.deis.cc/en/latest/troubleshooting_deis/

@@ -1,7 +1,7 @@
 name: workflow-e2e
-home: https://github.com/deisthree/workflow-e2e
+home: https://github.com/deiscc/workflow-e2e
 version: <Will be populated by the ci before publishing the chart>
 description: End-to-end tests for Deis Workflow, executed in parallel.
 maintainers:
   - name: Deis Team
-    email: engineering@deis.com
+    email: engineering@deis.cc

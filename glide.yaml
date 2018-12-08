@@ -1,4 +1,4 @@
-package: github.com/deis/workflow-e2e
+package: github.com/deiscc/workflow-e2e
 import:
 - package: github.com/onsi/ginkgo
 - package: github.com/onsi/gomega
@@ -6,4 +6,4 @@ import:
   - gbytes
   - gexec
 - package: github.com/ThomasRooney/gexpect
-- package: github.com/deis/controller-sdk-go
+- package: github.com/deiscc/controller-sdk-go

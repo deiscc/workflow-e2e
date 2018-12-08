@@ -8,14 +8,14 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/deis/workflow-e2e/tests/settings"
-	"github.com/deis/workflow-e2e/tests/util"
+	"github.com/deiscc/workflow-e2e/tests/settings"
+	"github.com/deiscc/workflow-e2e/tests/util"
 )
 
 var Admin = User{
 	Username:    "admin",
 	Password:    "admin",
-	Email:       "admintest@deis.com",
+	Email:       "admintest@deis.cc",
 	IsSuperuser: false,
 }
 
@@ -31,7 +31,7 @@ func NewUser() User {
 	return User{
 		Username:    fmt.Sprintf("test-%d", randSuffix),
 		Password:    "asdf1234",
-		Email:       fmt.Sprintf("test-%d@deis.io", randSuffix),
+		Email:       fmt.Sprintf("test-%d@deis.cc", randSuffix),
 		IsSuperuser: false,
 	}
 }

@@ -1,12 +1,12 @@
 package tests
 
 import (
-	deis "github.com/deis/controller-sdk-go"
-	"github.com/deis/workflow-e2e/tests/cmd"
-	"github.com/deis/workflow-e2e/tests/cmd/auth"
-	"github.com/deis/workflow-e2e/tests/model"
-	"github.com/deis/workflow-e2e/tests/settings"
-	"github.com/deis/workflow-e2e/tests/util"
+	deis "github.com/deiscc/controller-sdk-go"
+	"github.com/deiscc/workflow-e2e/tests/cmd"
+	"github.com/deiscc/workflow-e2e/tests/cmd/auth"
+	"github.com/deiscc/workflow-e2e/tests/model"
+	"github.com/deiscc/workflow-e2e/tests/settings"
+	"github.com/deiscc/workflow-e2e/tests/util"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

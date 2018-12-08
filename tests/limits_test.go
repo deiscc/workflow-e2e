@@ -3,12 +3,12 @@ package tests
 import (
 	"fmt"
 
-	"github.com/deis/workflow-e2e/tests/cmd"
-	"github.com/deis/workflow-e2e/tests/cmd/apps"
-	"github.com/deis/workflow-e2e/tests/cmd/auth"
-	"github.com/deis/workflow-e2e/tests/cmd/builds"
-	"github.com/deis/workflow-e2e/tests/model"
-	"github.com/deis/workflow-e2e/tests/settings"
+	"github.com/deiscc/workflow-e2e/tests/cmd"
+	"github.com/deiscc/workflow-e2e/tests/cmd/apps"
+	"github.com/deiscc/workflow-e2e/tests/cmd/auth"
+	"github.com/deiscc/workflow-e2e/tests/cmd/builds"
+	"github.com/deiscc/workflow-e2e/tests/model"
+	"github.com/deiscc/workflow-e2e/tests/settings"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

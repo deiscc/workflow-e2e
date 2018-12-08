@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/deis/workflow-e2e/tests/cmd/auth"
-	"github.com/deis/workflow-e2e/tests/settings"
+	"github.com/deiscc/workflow-e2e/tests/cmd/auth"
+	"github.com/deiscc/workflow-e2e/tests/settings"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/config"

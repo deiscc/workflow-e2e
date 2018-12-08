@@ -1,18 +1,18 @@
 
-|![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warning.svg/156px-Warning.svg.png) | Deis Workflow will soon no longer be maintained.<br />Please [read the announcement](https://deis.com/blog/2017/deis-workflow-final-release/) for more detail. |
+|![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Warning.svg/156px-Warning.svg.png) | Deis Workflow will soon no longer be maintained.<br />Please [read the announcement](https://deis.cc/blog/2017/deis-workflow-final-release/) for more detail. |
 |---:|---|
 | 09/07/2017 | Deis Workflow [v2.18][] final release before entering maintenance mode |
 | 03/01/2018 | End of Workflow maintenance: critical patches no longer merged |
 
 # Deis Workflow End to End Tests v2
 
-[![Build Status](https://ci.deis.io/job/workflow-e2e/badge/icon)](https://ci.deis.io/job/workflow-e2e)
-[![Go Report Card](https://goreportcard.com/badge/github.com/deis/workflow-e2e)](https://goreportcard.com/report/github.com/deis/workflow-e2e)
-[![Docker Repository on Quay](https://quay.io/repository/deisci/deis-e2e/status "Docker Repository on Quay")](https://quay.io/repository/deisci/deis-e2e)
+[![Build Status](https://ci.deis.cc/job/workflow-e2e/badge/icon)](https://ci.deis.cc/job/workflow-e2e)
+[![Go Report Card](https://goreportcard.com/badge/github.com/deiscc/workflow-e2e)](https://goreportcard.com/report/github.com/deiscc/workflow-e2e)
+[![Docker Repository on Quay](https://quay.io/repository/deiscc/deis-e2e/status "Docker Repository on Quay")](https://quay.io/repository/deiscc/deis-e2e)
 
 Deis (pronounced DAY-iss) Workflow is an open source Platform as a Service (PaaS) that adds a developer-friendly layer to any [Kubernetes](http://kubernetes.io) cluster, making it easy to deploy and manage applications on your own servers.
 
-For more information about the Deis Workflow, please visit the main project page at https://github.com/deisthree/workflow.
+For more information about the Deis Workflow, please visit the main project page at https://github.com/deiscc/workflow.
 
 We welcome your input! If you have feedback, please [submit an issue][issues]. If you'd like to participate in development, please read the "Development" section below and [submit a pull request][prs].
 
@@ -32,7 +32,7 @@ The Deis project welcomes contributions from all developers. The high level proc
 
 ## Prerequisities
 
-Before you run the tests, you'll need a full Deis cluster up and running in Kubernetes. Follow the instructions [here](https://github.com/deisthree/charts#installation) to get one running.
+Before you run the tests, you'll need a full Deis cluster up and running in Kubernetes. Follow the instructions [here](https://github.com/deiscc/charts#installation) to get one running.
 
 ## Run the Tests
 
@@ -67,7 +67,7 @@ Setting the `GINKGO_NODES` environment variable to a value of `1` will allow ser
 If you have Go 1.5 or greater already installed and working properly and also have the [Glide](https://github.com/Masterminds/glide) dependency management tool for Go installed, you may clone this repository into your `$GOPATH`:
 
 ```console
-git clone git@github.com:deis/workflow-e2e.git $GOPATH/src/github.com/deis/workflow-e2e
+git clone git@github.com:deis/workflow-e2e.git $GOPATH/src/github.com/deiscc/workflow-e2e
 ```
 
 One-time execution of the following will resolve the test suite's own dependencies:
@@ -117,7 +117,7 @@ A third option is to run the test suite from within the very cluster that is und
 To install the [helm](https://github.com/kubernetes/helm) chart and start the tests, assuming helm and its corresponding server component tiller are [installed](https://github.com/kubernetes/helm/blob/master/docs/install.md):
 
 ```console
-helm repo add workflow-e2e https://charts.deis.com/workflow-e2e
+helm repo add workflow-e2e https://charts.deis.cc/workflow-e2e
 helm install --verify workflow-e2e/workflow-e2e --namespace deis
 ```
 
@@ -141,10 +141,10 @@ Python 2.7.10 (default, Aug 13 2015, 12:27:27)
 >>> m.objects.all()
 ```
 
-Note that this is an ongoing issue for which we're planning [a more comprehensive fix](https://github.com/deisthree/workflow-e2e/issues/12).
+Note that this is an ongoing issue for which we're planning [a more comprehensive fix](https://github.com/deiscc/workflow-e2e/issues/12).
 
 
 [install-k8s]: http://kubernetes.io/gettingstarted/
-[issues]: https://github.com/deisthree/workflow-e2e/issues
-[prs]: https://github.com/deisthree/workflow-e2e/pulls
-[v2.18]: https://github.com/deisthree/workflow/releases/tag/v2.18.0
+[issues]: https://github.com/deiscc/workflow-e2e/issues
+[prs]: https://github.com/deiscc/workflow-e2e/pulls
+[v2.18]: https://github.com/deiscc/workflow/releases/tag/v2.18.0

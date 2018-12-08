@@ -3,11 +3,11 @@ package tests
 import (
 	"time"
 
-	"github.com/deis/workflow-e2e/tests/cmd"
-	"github.com/deis/workflow-e2e/tests/cmd/apps"
-	"github.com/deis/workflow-e2e/tests/cmd/auth"
-	"github.com/deis/workflow-e2e/tests/model"
-	"github.com/deis/workflow-e2e/tests/settings"
+	"github.com/deiscc/workflow-e2e/tests/cmd"
+	"github.com/deiscc/workflow-e2e/tests/cmd/apps"
+	"github.com/deiscc/workflow-e2e/tests/cmd/auth"
+	"github.com/deiscc/workflow-e2e/tests/model"
+	"github.com/deiscc/workflow-e2e/tests/settings"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/extensions/table"
@@ -81,7 +81,7 @@ var _ = Describe("deis registry", func() {
 
 			Specify("that user can not deploy from a private registry due to lack of credentials", func() {
 				// do an unsuccessful deploy
-				image := "quay.io/deisci/e2e-private-registry-test"
+				image := "quay.io/deiscc/e2e-private-registry-test"
 				sess, err := cmd.Start("deis pull --app=%s %s", &user, app.Name, image)
 				Expect(err).NotTo(HaveOccurred())
 				Eventually(sess).Should(Say("Creating build..."))
@@ -101,13 +101,13 @@ var _ = Describe("deis registry", func() {
 
 				// read-only access
 				registry_creds := "TP5BS3NHW0OZ20GER4IORTIJF90J48KKJ8NX8YC7Z22N5P7WE27BRKVMQ4QAEID8"
-				sess, err = cmd.Start("deis registry:set --app=%s username=deisci+e2e_registry password=%s", &user, app.Name, registry_creds)
+				sess, err = cmd.Start("deis registry:set --app=%s username=deiscc+e2e_registry password=%s", &user, app.Name, registry_creds)
 				Eventually(sess, settings.MaxEventuallyTimeout).Should(Say("=== %s Registry", app.Name))
 				Expect(err).NotTo(HaveOccurred())
 				Eventually(sess).Should(Exit(0))
 
 				// do a successful deploy
-				image := "quay.io/deisci/e2e-private-registry-test"
+				image := "quay.io/deiscc/e2e-private-registry-test"
 				sess, err = cmd.Start("deis pull --app=%s %s", &user, app.Name, image)
 				Expect(err).NotTo(HaveOccurred())
 				Eventually(sess).Should(Say("Creating build..."))

@@ -1,13 +1,13 @@
 package tests
 
 import (
-	"github.com/deis/workflow-e2e/tests/cmd"
-	"github.com/deis/workflow-e2e/tests/cmd/apps"
-	"github.com/deis/workflow-e2e/tests/cmd/auth"
-	"github.com/deis/workflow-e2e/tests/cmd/builds"
-	"github.com/deis/workflow-e2e/tests/model"
-	"github.com/deis/workflow-e2e/tests/settings"
-	"github.com/deis/workflow-e2e/tests/util"
+	"github.com/deiscc/workflow-e2e/tests/cmd"
+	"github.com/deiscc/workflow-e2e/tests/cmd/apps"
+	"github.com/deiscc/workflow-e2e/tests/cmd/auth"
+	"github.com/deiscc/workflow-e2e/tests/cmd/builds"
+	"github.com/deiscc/workflow-e2e/tests/model"
+	"github.com/deiscc/workflow-e2e/tests/settings"
+	"github.com/deiscc/workflow-e2e/tests/util"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -79,13 +79,6 @@ var _ = Describe("deis builds", func() {
 				Expect(err).NotTo(HaveOccurred())
 				Eventually(sess).Should(Say("Creating build..."))
 				Eventually(sess.Err).Should(Say(`image .* not found`))
-				Eventually(sess, settings.MaxEventuallyTimeout).Should(Exit(1))
-				// quay.io gives a "permission denied" 400 error
-				nonexistentImage = "quay.io/deis/nonexistent:dummy"
-				sess, err = cmd.Start("deis pull --app=%s %s", &user, app.Name, nonexistentImage)
-				Expect(err).NotTo(HaveOccurred())
-				Eventually(sess).Should(Say("Creating build..."))
-				Eventually(sess.Err).Should(Say("Permission Denied attempting to pull image"))
 				Eventually(sess, settings.MaxEventuallyTimeout).Should(Exit(1))
 
 				// test that the old rc is not deleted after a failed build
